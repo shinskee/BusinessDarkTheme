@@ -195,7 +195,7 @@ svg * {
 }
 
 .container {
-  min-width: calc(var(--container-width) + var(--container-padding-x) * 2);
+  max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
   margin-inline: auto;
   padding-inline: var(--container-padding-x);
 }
@@ -239,8 +239,8 @@ button,
 input,
 textarea,
 svg * {
-  -webkit-text-decoration: var(--transition-duration);
-          text-decoration: var(--transition-duration);
+  -webkit-transition-duration: var(--transition-duration);
+          transition-duration: var(--transition-duration);
 }
 
 a {
@@ -268,8 +268,48 @@ h4 {
   font-size: clamp(18px, 1.3888888889vw, 20px);
 }
 
+.button {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: var(--button-high);
+  padding-inline: 35px;
+  font-size: 20px;
+  color: var(--color-light);
+  background-color: var(--color-dark);
+  border: var(--border);
+  border-radius: var(--border-radius);
+}
+@media (hover: hover) {
+  .button:hover {
+    color: var(--color-dark);
+    background-color: var(--color-accent);
+  }
+}
+@media (hover: none) {
+  .button:active {
+    color: var(--color-dark);
+    background-color: var(--color-accent);
+  }
+}
+.button--transparent {
+  color: var(--color-dark);
+  background-color: transparent;
+}
+
 .header {
   padding-top: 60px;
+}
+@media (max-width: 1280px) {
+  .header {
+    padding-top: 30px;
+  }
 }
 .header__inner {
   display: -webkit-box;
@@ -289,6 +329,16 @@ h4 {
   margin-left: auto;
   font-size: 20px;
 }
+@media (max-width: 1280px) {
+  .header__menu {
+    font-size: 18px;
+  }
+}
+@media (max-width: 1023px) {
+  .header__menu {
+    font-size: 16px;
+  }
+}
 .header__menu-list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -299,6 +349,13 @@ h4 {
   -webkit-column-gap: 40px;
      -moz-column-gap: 40px;
           column-gap: 40px;
+}
+@media (max-width: 1280px) {
+  .header__menu-list {
+    -webkit-column-gap: 20px;
+       -moz-column-gap: 20px;
+            column-gap: 20px;
+  }
 }
 .header__menu-link {
   position: relative;
@@ -329,7 +386,7 @@ h4 {
   width: 0;
   height: 2px;
   background-color: currentColor;
-  -webkit-transition-duration: 0.2s;
-          transition-duration: 0.2s;
+  -webkit-transition-duration: inherit;
+          transition-duration: inherit;
 }
 /*# sourceMappingURL=styles.css.map */
