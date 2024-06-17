@@ -1,9 +1,12 @@
 @import 
-    './fonts', 
-    './globals', 
-    './media', 
-    './mixins', 
-    './nomalize', 
-    './utils', 
-    './veriables';
+    'normalize',
+    'fonts', 
+    'mixins',
+    'media',
+    'veriables',
+    'utils',
+    'globals';
+
+@import
+    'blocks/header';
 
