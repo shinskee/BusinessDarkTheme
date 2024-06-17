@@ -1,0 +1,13 @@
+$desktop: 1280px;
+$tablet: 1023px;
+$mobile: 767px;
+
+$desktop-above: 1281px;
+$tablet-above: 1024px;
+$mobile-above: 768px;
+
+@mixin desctop {
+    @media (max-width: $desktop) {
+        @content;
+    }
+}
