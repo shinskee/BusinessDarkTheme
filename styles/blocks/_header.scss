@@ -1,8 +1,12 @@
 .header {
     padding-top: 60px;
 
-    @include desctop {
+    @include desktop {
         padding-top: 30px;
+    }
+
+    @include mobile {
+        padding-top: 15px;
     }
 
     &__inner {
@@ -10,13 +14,17 @@
         justify-content: space-between;
         align-items: center;
         column-gap: 40px;
+
+        @include tablet {
+            column-gap: 30px;
+        }
     }
 
     &__menu {
         margin-left: auto;
         font-size: 20px;
 
-        @include desctop {
+        @include desktop {
             font-size: 18px;
         }
 
@@ -29,7 +37,7 @@
             align-items: center;
             column-gap: 40px;
 
-            @include desctop {
+            @include desktop {
                 column-gap: 20px;
             }
         }
@@ -57,6 +65,24 @@
                 background-color: currentColor;
                 transition-duration: inherit;
             }
+        }
+    }
+    
+    &__logo {
+        @include tablet {
+            max-width: 120px;
+        }
+
+        @include mobile {
+            max-width: 144px;
+        }
+    }
+
+    &__button {
+        @include tablet {
+            height: 40px;
+            padding-inline: 18px;
+            font-size: 16px;
         }
     }
 }

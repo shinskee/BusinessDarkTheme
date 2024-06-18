@@ -13,7 +13,7 @@
 
 @mixin reset-button {
     padding: 0;
-    border-color: transparent;
+    background-color: transparent;
     border: none;
 }
 
@@ -30,9 +30,9 @@
 
 @mixin abs-center {
     position: absolute;
-    left: 50%;
     top: 50%;
-    translate: -50%, -50%;
+    left: 50%;
+    translate: -50% -50%;
 }
 
 @mixin square($size) {
