@@ -1,0 +1,46 @@
+.banner {
+    --bannerImageOffsetY: 24px;
+
+    padding-block: var(--bannerImageOffsetY);
+
+    @include tablet {
+        --bannerImageOffsetY: 0;
+    }
+
+    &__inner {
+        border-radius: var(--border-radius-large);
+        background-color: var(--color-gray);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        row-gap: 26px;
+        padding: 60px;
+        align-items: start;
+
+        @include tablet {
+            padding: 50px;
+        }
+
+        @include mobile {
+            row-gap: 20px;
+        }
+    }
+
+    &__image {
+        margin-block: calc(var(--bannerImageOffsetY) * -1);
+
+        @include tablet {
+            max-width: 40%;
+            height: auto;
+        }
+    }
+
+    &__description {
+        max-width: 500px;
+    }
+}
