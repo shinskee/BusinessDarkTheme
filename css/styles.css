@@ -184,8 +184,8 @@ svg * {
   --container-width: 1240px;
   --container-padding-x: 20px;
   --section-padding-y: 70px;
-  --input-high: 59px;
-  --button-high: 68px;
+  --input-height: 59px;
+  --button-height: 68px;
   --transition-duration: 0.2s;
 }
 
