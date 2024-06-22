@@ -1,4 +1,11 @@
 .fild {
+    --fildInputHeight: var(--input-height);
+    --fildInputTextColor: var(--color-dark);
+    --fildInputBgColor: var(--color-light);
+    --fildInputBorderColor: var(--color-dark);
+    --fildInputPlaceholderColor: var(--color-dark-alt);
+    --fildInputHoverBgColor: var(--color-accent);
+
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -8,23 +15,37 @@
         row-gap: 10px;
     }
 
+    &--big-height {
+        --fildInputHeight: var(--button-height);
+    }
+
+    &--dark-bg {
+        --fildInputTextColor: var(--color-light);
+        --fildInputBgColor: var(--color-dark-alt);
+        --fildInputBorderColor: var(--color-light);
+        --fildInputPlaceholderColor: var(--color-light);
+        --fildInputHoverBgColor: var(--color-dark);
+    }
+
     &__label {
         @include fluid-text(16, 14);
     }
 
     &__input {
         width: 100%;
-        height: var(--input-height);
-        border: var(--border);
+        height: var(--fildInputHeight);
+        border: 1px solid var(--fildInputBorderColor);
         border-radius: var(--border-radius);
         padding-inline: 30px;
+        color: var(--fildInputTextColor);
+        background-color: var(--fildInputBgColor);
 
         @include mobile {
             padding-inline: 20px;
         }
 
         @include hover {
-            background-color: var(--color-accent);
+            background-color: var(--fildInputHoverBgColor);
         }
 
         &:focus {
@@ -33,7 +54,7 @@
         }
 
         &::placeholder {
-            color: var(--color-gray-alt);
+            color: var(--fildInputPlaceholderColor);
         }
 
         &--textarea {
